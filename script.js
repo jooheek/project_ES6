@@ -60,6 +60,7 @@ driversLicense6(true);
 //특히나 const는 변하지 않는 수를 설정하기 떄문에 할당되는 값까지 작성해야함
 
 
+
 let i =23;
 for(let i =0; i< 5;i++){
     console.log(i);
@@ -76,44 +77,6 @@ console.log(i);
 
 //var은 function단위로 실행되기 때문에
 //0,1,2,3,4,5가 찍힌다.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

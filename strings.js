@@ -10,7 +10,9 @@ function calcAge(year){
 
 //ES5
 
-console.log('This is '+firstName+' '+lastName+'. He was born in '+yearOfBirth +'. Today he is '+calcAge(yearOfBirth)+' years old');
+console.log('This is '+firstName+' '+
+    lastName+'. He was born in '+yearOfBirth +
+    '. Today he is '+calcAge(yearOfBirth)+' years old');
 
 //ES6
 //es6부터는 string 을 +로 연결할게 아니라 backtick(`)으로 연결한다.
