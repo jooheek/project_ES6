@@ -1,4 +1,5 @@
 
+
 //Lecture:let,const
 
 //ES5
@@ -21,7 +22,7 @@ const name6 ='Jane Smith';
 function driversLicense5(passedTest){
     if(passedTest){
         console.log(firstname);
-        //ES5에서는 변수가 선언되기 전에 불러오면 undefined 라고 뜨게 된다.
+        //undefined
 
         var firstname ='John';
         var yearOfBirth = 1990;
@@ -32,16 +33,17 @@ function driversLicense5(passedTest){
 
 driversLicense5(true);
 
+
 //ES6
 
 function driversLicense6(passedTest){
 
     //console.log(firstname);
     //ES6 에서는 변수가 선언되기 전에 불러오면 Uncaught ReferenceError 발생
-    //이유: temporal-dead zone
+    //이유: temporal-dead zone(선언전에 변수에 접근하는 것을 금지)
     let firstname;
     const yearOfBirth = 1990;
-    
+
     if(passedTest){
          firstname ='John';
 
@@ -50,14 +52,17 @@ function driversLicense6(passedTest){
 
 }
 
-driversLicense6(true); 
+driversLicense6(true);
 
-// ES5에서는 멀쩡하게 작동하지만 ES6버전에서 Uncaught ReferenceError발생하는 이유 : 
+//ES5,ES6모두 변수 선언전에 부르면 block외부든 내부든 상관없이 undefined
+
+// ES5에서는 멀쩡하게 작동하지만 ES6버전에서 Uncaught ReferenceError 발생하는 이유 :
 //ES6는 block-scoped이기 때문에 변수들이 if block안에서만 유효하다.
-//하지만 ES5는 function-scoped이기 때문에 함수내 이기만 하면 어디서든 유효함
+//하지만 ES5는 function-scoped이기 때문에  변수 선언전에 부르지 않고 함수 내 이기만 하면 어디서든 유효함
 
-//ES6에서 변수를 함수내에서 사용하려면 function variable로 정의해야함 
+//ES6에서 변수를 block 외부에서 사용하려면 function variable 로 정의해야함
 //특히나 const는 변하지 않는 수를 설정하기 떄문에 할당되는 값까지 작성해야함
+
 
 
 

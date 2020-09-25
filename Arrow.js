@@ -5,7 +5,7 @@ const years = [1990,1987,1932,2020];
 var ages5 = years.map(function(el){
     return 2020 -el;
 });
-//map배열 내의 모든 요소 각각에 대해 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
+//map 배열 내의 모든 요소 각각에 대해 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환
 
 console.log(ages5);
 

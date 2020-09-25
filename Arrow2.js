@@ -31,11 +31,12 @@ var box6 ={
     }
 }
 
-box6.clickMe();
+//box6.clickMe();
 
 //arrow 함수가 this 키워드를 공유하도록 함
 //this 키워드를 유지하고 싶으면 항상 arrow 함수를 사용하는 것이 좋다.
 
+//ES6
 var box66 ={
     color:'green',
     position:1,
@@ -61,7 +62,7 @@ Person.prototype.myFriends5 =
         var arr = friends.map(function (el){
            return this.name +' is friends with ' +el;
         });
-        console.log(arr);
+        //console.log(arr);
     };
 
 var friends = ['Bob','Jane','Kim'];
@@ -74,23 +75,21 @@ Person.prototype.myFriends5 =
         var arr = friends.map(function (el){
             return this.name +' is friends with ' +el;
         }.bind(this));
-        //console.log(arr);
+       // console.log(arr);
     };
 
-var friends = ['Bob','Jane','Kim'];
 
-//new Person('John').myFriends5(friends);
+new Person('John').myFriends5(friends);
 //이때 .bind(this)를 추가하면 function (el){
 //             return this.name +' is friends with ' +el;
 //         }가 복사되고 복사된 함수가 바로 불러와진다.또한 괄호안에 입력된 variable이 function내부의 variable this에 접근할 수 있게된다.
 
 
 //ES6
-
 Person.prototype.myFriends6 =
     function (friends){
         var arr = friends.map(el => `${this.name} is friends with ${el}`);
-      //  console.log(arr);
+        console.log(arr);
     };
 
 new Person('Mike').myFriends6(friends);

@@ -22,9 +22,12 @@ console.log(`this is ${firstName} ${lastName}.He was born in ${yearOfBirth}. Tod
 
 const n = `${firstName} ${lastName}`;
 
-//문장을 하나로 받아서 .startsWith()으로 검증 가능
 console.log(n.startsWith('j'));
+//n이 j로 시작하는지 확인
 console.log(n.endsWith('h'));
+//n이 h로 끝나는지 확인
 console.log(n.includes('Sm'));
 console.log(n.includes(''));
+//n에 string이 들어있는지 확인
 console.log(`${firstName} `.repeat(5));
+//firstName 을 다섯번 반복
